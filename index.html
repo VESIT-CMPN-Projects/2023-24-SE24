@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible"content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immunoshield</title>
+    
+    <!-- font awesome cdn link-->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link-->
+    <link rel = "stylesheet" href = "css/style.css">
+    @import url('https://fonts,gooleapis.com/css2?family=Popppins:wght@100;200;300;400;500;600;700;&display=sway');
+<style>
+:root{
+    --green: #F57D1F;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22 , 160 , 133 , .2);
+    --text-shadow: .4rem .4rem 0 rgba(0,0,0,.2);
+    --border: .2rem solid var(--green);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing : border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: visible;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 9%;
+}
+
+section:nth-child(even){
+    background: #f5f5f5;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: 4rem;
+} 
+.heading span{
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem; 
+    border-style: solid;
+    border-color: black;
+    box-shadow: var(--box-shadow);
+    color: var(--green);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.imrev{
+   height: 200px;
+   width: 200px;
+}
+
+
+.btn:hover{
+    background: var(--green);
+    color: #ffff;
+}
+
+.btn:hover span{
+     color: var(--green);
+     background: #ffff;
+
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 10rem;
+}
+
+.home .image{
+    flex: 1 1 45rem;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content{
+    flex:1 1 45rem;
+    font-size: 10px;
+}
+
+.home .content h3{
+     font-size: 4.1rem;
+     color: var(--black);
+     line-height: 1.8;
+     text-shadow: var(--text-shadow);
+}
+.home .content p{
+     font-size: 1.7rem;
+     color: var(--light-color);
+     line-height: 1.8;
+     padding: 1rem 0;
+}
+
+.header{
+    padding: 2rem 9%;
+    position: fixed;
+    height : 85px;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffff;
+}
+.header .logo{                                               
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.header .logo i{
+    color: var(--green);
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+}
+.header .navbar select{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+}
+.header .navbar a:hover{
+    color:var(--green);
+}
+
+#p{
+    line-height: 10px;
+}
+#menu-btn{
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: hsla(150, 12%, 97%, 0.933);
+    color:var(--green);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    display: none;
+}
+
+.icons-container{
+    display: grid;
+    gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    
+}
+
+.icons-container .icons{
+    border: var(--border);
+    font-size: 30px;
+    box-shadow:var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding:2.5rem ;
+    border-style: solid;
+  border-color: green;
+}
+
+.icons-container .icons i{
+    font-size: 4.5rem;
+    color: var(--green);
+    padding-bottom: .7rem;
+}
+
+.icons-container .icons h3{
+    font-size: 4.5rem;
+    color: var(--black);
+    padding-bottom: .5rem 0 ;
+    text-shadow: var(--text-shadow);
+}
+.icons-container .icons p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(27rem , 1fr));
+    gap: 2rem;
+}
+.services .box-container .box{
+    background: #ffff;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2.5rem;
+    border-style: solid;
+    color: green;
+}
+
+.services .box-container .box i{
+    color: var(--green);
+    font-size: 5rem;
+    padding-bottom: .5rem;
+}
+
+.services .box-container .box h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.services .box-container .box p{
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+/* media queries */
+@media(max-width:991px){
+    html{
+    font-size: 55%;
+}
+.header{
+    padding: 2rem;
+}
+}
+@media(max-width:768px){
+    #menu-btn{
+        display: initial;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 115% ; right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #ffff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin:top right ;
+        transition: none;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block; 
+        margin: 2.5rem;
+    }
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+
+}
+
+.about .row .image img{
+ width : 100%;
+}
+
+.about .row .content {
+  flex:1 1 45rem;
+}
+
+.about .row .content h3{
+  color:var(--black);
+  text-shadow:  var(var(--text-shadow));
+  font-size :4rem;
+  height :1.8;
+}
+
+.about .row .content p{
+  color:var(--light-color);
+  padding :1rem 0;
+  font-size :1.5rem;
+  line-height :1.8;}
+
+  .about .row .content b{
+  color:var(--black);
+  padding :1rem 0;
+  font-size :1.5rem;
+  line-height :1.8;}
+
+  /* .about {
+  text-align: center;
+  padding: 2rem 0;
+} */
+
+/* .about .heading {
+  margin-bottom: 2rem;
+} */
+.about .row .content h3 {
+  color: var(--black);
+  text-shadow: var(var(--text-shadow));
+  font-size: 4rem;
+  line-height: 1.8; /* Corrected property */
+}
+
+.about .row .content p {
+  color: var(--light-color);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.about .row .content b {
+  color: var(--black);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}tf
+
+.reviews .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(27rem , 1fr));
+    gap:2rem;
+}
+
+.reviews .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2.5rem;
+    background: #ffff;
+    text-align: center;
+    border-style: solid;
+    border-color: green;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.reviews .box-container .img{
+    height: 10rem;
+    width: 10rem;
+    z-index: 2;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .5rem solid #ffff;
+}
+
+.reviews .box-container .box .stars i{
+    color: #ffff;
+     font-size: 1.5rem;
+     
+}
+
+.reviews .box-container .box .text{
+    color: var(--light-color);
+    line-height: 1.8;
+    font-size: 1.6rem;
+    padding-top: 4rem;
+}
+
+
+
+@media(max-width:450px){
+    html{
+    font-size: 50%;
+}
+
+}
+footer {
+      background-color: #c5c8c6;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      top : 100;
+      width: 100%;
+      
+    }
+
+    /* Footer Text Styles */
+    footer p {
+      margin: 0;
+      color: #888;
+      font-size: 14px;
+    }
+
+ 
+
+
+</style>
+    
+
+
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html"><img src="Screenshot 2023-10-21 003337.png" class="logo" width="120" height="70"><i class="fas fa-heartbeat"></i></img></a>
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="Vaccine.html" target="_blank">VACCINES</a>
+            <a href="#services">SERVICES</a>
+            <a href="#about">ABOUT</a>
+            <a href="#reviews">REVIEWS</a>
+            <select id="loginSignupSelect" name="Login/Signup">
+                <option value="http://localhost/js/login_signup_dr.php">DOCTOR</option>
+                <option value="http://localhost/js/login_signup_pat.php">PATIENT</option>
+            </select>
+            <script>
+                document.getElementById('loginSignupSelect').addEventListener('change', function() {
+                    window.location.href = this.value;
+                });
+            </script>
+        </nav>
+    
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    
+    <section class ="home" id = "home">
+        <div class ="image">
+            <img src ="national-flag-of-india-3d-rendering-waving-flag-high-quality-image-original-colors-sizes-and-shapes-free-photo.jpg" width= 200px >
+        </div>
+        <div class ="content">
+             <h3>stay safe,stay vaccinated</h3>
+             <p><b>WE STAND FOR INDIA </b></p>
+             <a href="#Contact Us" class="btn">Contact us > <span class = "fas fa-hevron-right"></span></a>
+        </div>
+    </section>
+    
+
+    <section class = "icons-container">
+        <div class = "icons">
+            <i class = "fas fa-users"></i>
+            <h3>100+</h3>
+            <p>Satisfied Patients</p>
+        </div>  
+        <div class = "icons">
+            <i class = "fas fa-procedures"></i>
+            <h3>20+</h3>
+            <p>Home Assistance Provided</p>
+        </div>
+
+
+    </section>
+
+
+   
+      
+
+    <section class="services" id="services">
+        <h1 class="heading">Our <span>Services</span></h1>
+        <div class="box-container">
+            <div class = "box">
+            <i class = "fas fa-notes-medical"></i>
+            <h3>Free CheckUps</h3>
+            <p>FREE CHECKUPS FOR ANY POST EFFECTS OF VACCINES !! </p>
+            <a href="#" class = "btn">Learn More<span class = "fas fa-chavron-right"></span>.</a>
+        </div>
+            <div class = "box">
+            <i class = "fas fa-procedures"></i>
+            <h3>24/7 Home Assistance</h3>
+            <p>WE WILL VISIT YOU IF YOU NEED !!<br> YOUR COMFORT IS OUR DUTY</p>
+            <a href="#" class = "btn">Learn More<span class = "fas fa-chavron-right"></span>.</a>
+        </div>
+            <div class = "box">
+            <i class = "fas fa-heartbeat"></i>
+            <h3>Total Care</h3>
+            <p>YOU WILL FEEL SAFE AS YOU ARE AT YOUR HOME DONT WORRY!!</p>
+            <a href="#" class = "btn">Learn More<span class = "fas fa-chavron-right"></span>.</a>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Us</h1>
+        <div class = "row">
+            <div class = "image">
+                <img src = "WhatsApp Image 2023-12-08 at 4.14.43 PM (3).jpeg">
+
+            </div>
+            <div class = "content">
+                <h3>We Care for You</h3>
+                <p>India, despite notable progress in its immunization program, continues to grapple with delayed and incomplete child vaccinations, leading to a significant portion of children being vulnerable to vaccine-preventable diseases. To address this critical issue and further strengthen the nation's vaccination efforts, there is a pressing need for the development of an efficient and user-friendly child vaccination management system that can bridge the existing gaps, reduce delays, and ensure that every child receives timely and complete vaccinations.<br>
+                To keep a child healthy and secure from future risks of deadly diseases, a proper vaccination schedule should be maintained. But many parents do not know about the schedule or they forget about it and consequently their child becomes vulnerable to diseases. To prevent child-death solely for this reason, a system should be placed to notify the parents prior to vaccination schedule by mobile SMS or in other ways.<br><b>THIS IS US , THIS IS IMMUNOSHIELD.</b>
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+     <section class="reviews" id="reviews">
+        <h1 class = "heading" Patients's <span> Reviews</span></h1>
+        <div class = "box-container">
+        <div class = "box">
+             <img src = "WhatsApp Image 2023-12-08 at 4.14.43 PM (12).jpeg" class= "imrev">
+             <h3>Christopher Nolan</h3>    
+        
+        <div class = "stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+
+        </div>
+        <p class="text">The service provided by the app was very good.</p>
+
+        </div>
+
+        <div class = "box">
+            <img src = "WhatsApp Image 2023-12-08 at 4.14.43 PM (13).jpeg" class= "imrev">
+            <h3>Rakesh Yadav</h3>    
+       <div class = "stars">
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star"></i>
+           <i class="fas fa-star-half-alt"></i>
+
+       </div>
+       <p class="text">The assistance was very good and the helped me ensure that my child is vaccinated time to time.Also the interface is very good and easy to use.</p>
+
+       </div>
+       <div class = "box">
+        <img src = "WhatsApp Image 2023-12-08 at 4.14.43 PM (11).jpeg" width = 250px height = 250px class= "imrev">
+        <h3>Devangana Roy</h3>    
+   <div class = "stars">
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star"></i>
+       <i class="fas fa-star-half-alt"></i>
+
+   </div>
+   <p class="text">Delighted by the service provided.</p>
+
+   </div>
+
+
+
+     </section>
+
+
+
+
+
+    <!--custom js file link-->
+    <script src = "js/script.js"></script>
+
+
+    <footer class = "Contact us" id = "Contact Us">
+            <p>&copy; 2023 Child Vaccination Center. All rights reserved.</p>
+            <p>Contact: immunoshield@gmail.com | Phone: +1 123-456-7890</p>
+    </footer>
+
+    
+
+    
+    
+
+
+</body>
+</html>

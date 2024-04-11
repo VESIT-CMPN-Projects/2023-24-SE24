@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resigter</title>
+    <link rel="stylesheet" href="C:\Users\Varun\Desktop\Js\style1.css">
+    
+</head>
+<body>
+    <div class="hello">
+        <div class="form-box">
+            <div class="btn-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn"  onclick="doctor()">Doctor</button>
+                <button type="button" class="toggle-btn"  onclick="patient()">Parent</button>             
+            </div>
+            <div class="social-icons">
+                <img src="../images/instagram_img.png" alt="Instagram" srcset="">
+                <img src="../images/whatsapp_img.png" alt="Whatsapp" srcset="">
+                <img src="../images/fackbook_img.png" alt="SMS" srcset="">
+            </div>
+            <form action="" id="doctor" class="input-group">
+                <input type="text" class="input-field" placeholder="Name of Docter" required>
+                <input type="email" class="input-field" placeholder="Enter Email" required>
+                <input type="password" class="input-field" placeholder="Add Password" required>
+                <input type="text" class="input-field" placeholder="Name of Hospital" required>
+                
+                <a href="sign_page.html"><button type="button" class="submit-btn">Register</button></a>
+
+            </form>
+            <form action="" id="patient" class="input-group">
+                <input type="text" class="input-field" placeholder="Name of Patient" required>
+                <input type="email" class="input-field" placeholder="Enter Email" required>
+                <input type="password" class="input-field" placeholder="Add Password" required>
+                <input type="text" class="input-field" placeholder="Docters name" required>
+                
+                
+                <a href="sign_page.html"><button type="button" class="submit-btn">Register</button></a>
+
+            </form>
+
+        </div>
+        
+    </div>
+    
+    <script>
+        var x = document.getElementById("doctor");
+        var y = document.getElementById("patient");
+        var z = document.getElementById("btn");
+
+        function patient() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function doctor(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+
+        }
+
+    </script>
+    
+</body>
+</html>
